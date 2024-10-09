@@ -1,3 +1,4 @@
+import os
 from argparse import Namespace
 from pathlib import Path
 from typing import NamedTuple
@@ -55,7 +56,8 @@ class FLAGS(Namespace):
     token_mask_prob = 0.1
 
     # ckpt
-    ckpt_dir = Path("assets/infore/nat")
+    script_path = Path(__file__).resolve()
+    ckpt_dir = os.path.join(script_path.parent.parent.parent, "assets/infore/nat")
     data_dir = Path("train_data")
 
 

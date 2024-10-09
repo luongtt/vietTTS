@@ -1,6 +1,8 @@
+import os
 from pathlib import Path
 from typing import NamedTuple
 
 
 class FLAGS:
-    ckpt_dir = Path("./assets/infore/hifigan")
+    script_path = Path(__file__).resolve()
+    ckpt_dir = os.path.join(script_path.parent.parent.parent, "assets/infore/hifigan")
