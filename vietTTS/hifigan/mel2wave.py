@@ -9,6 +9,7 @@ import numpy as np
 
 from .config import FLAGS
 from .model import Generator
+from pathlib import Path
 
 
 class AttrDict(dict):
@@ -18,7 +19,8 @@ class AttrDict(dict):
 
 
 def mel2wave(mel):
-    config_file = "assets/hifigan/config.json"
+    script_path = Path(__file__).resolve()
+    config_file = os.path.join(script_path.parent.parent.parent, "assets/hifigan/config.json")
     MAX_WAV_VALUE = 32768.0
     with open(config_file) as f:
         data = f.read()
