@@ -57,7 +57,7 @@ class FLAGS(Namespace):
 
     # ckpt
     script_path = Path(__file__).resolve()
-    ckpt_dir = os.path.join(script_path.parent.parent.parent, "assets/infore/nat")
+    ckpt_dir = Path(os.path.join(script_path.parent.parent.parent, "assets/infore/nat"))
     data_dir = Path("train_data")
 
 

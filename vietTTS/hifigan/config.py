@@ -5,4 +5,4 @@ from typing import NamedTuple
 
 class FLAGS:
     script_path = Path(__file__).resolve()
-    ckpt_dir = os.path.join(script_path.parent.parent.parent, "assets/infore/hifigan")
+    ckpt_dir = Path(os.path.join(script_path.parent.parent.parent, "assets/infore/hifigan"))
